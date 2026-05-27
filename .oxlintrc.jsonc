@@ -1,0 +1,33 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "typescript", "unicorn", "oxc", "import", "vitest", "vue"],
+  "jsPlugins": ["@cspell/eslint-plugin"],
+  "env": {
+    "browser": true,
+  },
+  "categories": {
+    "correctness": "error",
+  },
+  "rules": {
+    "@cspell/spellchecker": ["warn", {}],
+    "eslint/no-console": ["error", { "allow": ["warn", "error"] }],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/switch-exhaustiveness-check": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "all",
+        "argsIgnorePattern": "^_",
+        "caughtErrors": "all",
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "ignoreRestSiblings": true,
+      },
+    ],
+    // test.for を使うと誤認識されてしまうため
+    "vitest/no-standalone-expect": "off",
+  },
+  "globals": {},
+  "ignorePatterns": [".turbo", ".report", "dist", "logs"],
+}

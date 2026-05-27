@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "antfu.iconify",
+    "EditorConfig.EditorConfig",
+    "oxc.oxc-vscode",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

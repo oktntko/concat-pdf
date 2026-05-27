@@ -1,0 +1,50 @@
+{
+  "name": "concat-pdf",
+  "version": "0.0.0",
+  "keywords": [],
+  "license": "ISC",
+  "author": "oktntko@gmail.com",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "build:pages": "MODE='pages' vite build --mode pages",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "lint": "oxlint --type-aware --type-check",
+    "spell-check": "cspell .",
+    "format": "oxfmt"
+  },
+  "dependencies": {
+    "@fontsource-variable/roboto-mono": "^5.2.9",
+    "pdf-lib": "^1.17.1",
+    "tailwindcss": "^4.3.0",
+    "vue": "^3.5.35"
+  },
+  "devDependencies": {
+    "@cspell/eslint-plugin": "^10.0.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "@tauri-apps/cli": "^2.11.2",
+    "@tsconfig/node24": "^24.0.4",
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/node": "^25.9.1",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "@vitejs/plugin-vue-jsx": "^5.1.5",
+    "@vue/tsconfig": "^0.9.1",
+    "cspell": "^10.0.0",
+    "npm-run-all2": "^9.0.1",
+    "oxfmt": "^0.52.0",
+    "oxlint": "~1.67.0",
+    "oxlint-tsgolint": "^0.23.0",
+    "typescript": "~6.0.3",
+    "vite": "beta",
+    "vite-plugin-vue-devtools": "^8.1.2",
+    "vue-tsc": "^3.3.2"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "packageManager": "pnpm@10.33.4"
+}
